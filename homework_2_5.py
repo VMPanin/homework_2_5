@@ -13,7 +13,7 @@ def get_images():
 
 
 def resize_images():
-    if os.path.exists('Result') == False:
+    if not os.path.exists('Result'):
         os.makedirs('Result')
     convert_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'convert.exe')
     for image in get_images():
