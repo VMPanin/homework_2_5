@@ -1,13 +1,16 @@
 import subprocess
 import os
 
+
 def get_current_dir():
-    current_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Source\\')
+    current_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Source')
     return current_dir
+
 
 def get_images():
     images = os.listdir(get_current_dir())
     return images
+
 
 def resize_images():
     if os.path.exists('Result') == False:
